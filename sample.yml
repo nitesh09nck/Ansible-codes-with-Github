@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+   - name: ping all node
+     ping:
+   - name: i want to install tree
+     apt:
+       name: apache2
+       state: present
