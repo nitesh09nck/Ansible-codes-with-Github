@@ -1,0 +1,3 @@
+---
+ubuntuvar: apache2
+redhatvar: httpd
