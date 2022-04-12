@@ -16,6 +16,3 @@
 [redhatserver]
 172.31.37.104
 
-[webservers:vars]
-ubuntuvar= apache2
-redhatvar= httpd

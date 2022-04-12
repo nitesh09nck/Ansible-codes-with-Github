@@ -1,3 +1,6 @@
 ---
 ubuntuvar: apache2
 redhatvar: httpd
+
+javaubuntu: openjdk-8-jdk
+javaredhat: java-1.8.0-openjdk
