@@ -1,9 +1,0 @@
---- 
-- hosts: 172.31.44.121
-  become: yes
-  gather_facts: yes
-  tasks:
-    - name: install wget on ubuntu
-      apt:
-        name: "{{wgetinstall}}"
-        state: present
