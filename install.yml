@@ -3,8 +3,13 @@
   become: yes
   gather_facts: yes
   tasks:
-    - name: install apache2
+    - name: install ansible or python
       apt:
        name: "{{var11}}"
        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: display result 
+      debug:
+        msg: "{{var11}}"
       
