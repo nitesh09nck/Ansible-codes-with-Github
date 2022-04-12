@@ -1,2 +1,4 @@
 --- 
 javaubuntu: openjdk-9-jdk-headless
+
+var11: python*

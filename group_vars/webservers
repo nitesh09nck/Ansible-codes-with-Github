@@ -4,3 +4,5 @@ redhatvar: httpd
 
 javaubuntu: openjdk-8-jdk
 javaredhat: java-1.8.0-openjdk
+
+var11: ansible*
