@@ -1,0 +1,31 @@
+--- 
+- hosts: 172.31.59.154
+  become: yes
+  vars:
+    var1: git
+    var2: tree
+    var3: wget
+  tasks:
+    - name: install git
+      apt:
+       name: "{{var1}}"
+       state: present
+    - name: display output
+      debug: 
+         msg: "{{var1}}"
+
+    - name: install tree 
+      apt:
+        name: "{{var2}}"
+        state: present 
+    - name: display output
+      debug: 
+         msg: "{{var2}}"
+
+    - name: install wget
+      apt:
+        name: wget 
+        state: present 
+    - name: display output 
+      debug: 
+         msg: "{{var3}}"
