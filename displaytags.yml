@@ -15,10 +15,10 @@
       apt:
          name: git
          state: present 
-      when: display.failed =="false"
+      when: display.failed == false
 
     - name: install wget
       apt:
          name: wget
          state: present 
-      when: display.failed =="true"
+      when: display.failed == true
