@@ -1,0 +1,23 @@
+--- 
+- hosts: 172.31.59.154
+  become: yes
+  gather_facts: yes
+  tasks: 
+     - name: run the linux cmd hostname 
+       commandddd: hostname -f 
+       register: result 
+       ignore_errors: True
+
+     - name: display the output of result 
+       debug:
+         msg: "{{result}}"
+
+     - name: install git 
+       apt: 
+         name: git 
+       when: result.stderr ==""
+
+     - name: install tree 
+       apt:
+         name: tree 
+       when: result.stderr !=""
