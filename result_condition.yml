@@ -5,7 +5,7 @@
   tasks: 
      - name: run the linux cmd hostname 
        command: hostname -f 
-       resister: result 
+       register: result 
 
      - name: display the output of result 
        debug:
