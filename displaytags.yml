@@ -5,3 +5,8 @@
   tasks: 
     - name: run a cmd 
       command: date 
+      register: display
+
+    - name: display result 
+      debug:
+         msg: "{{display}}"
