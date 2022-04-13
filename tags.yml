@@ -3,12 +3,12 @@
   become: yes
   gather_facts: yes
   tasks: 
-   - name: run cmd date 
-     command: date
-     tags: tag1
+    - name: run cmd date 
+      command: date
+      tags: tag1
 
-   - name: run uname -a cmd 
-     commmand: uname -a 
-     tags: tag2
+    - name: run uname -a cmd 
+      commmand: uname -a 
+      tags: tag2
     
      
