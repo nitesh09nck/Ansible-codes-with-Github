@@ -15,4 +15,12 @@
         state: present 
       tags: tag2
     
+    - name: run the linux cmd hostname 
+      command: hostname -f 
+      register: result 
+      tags: tag3
+
+    - name: display the output of result 
+      debug:
+         msg: "{{result}}"
      
