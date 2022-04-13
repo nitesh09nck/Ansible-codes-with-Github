@@ -3,21 +3,22 @@
   become: yes
   gather_facts: yes
   tasks: 
-     - name: run the linux cmd hostname 
-       commandddd: hostname -f 
-       register: result 
-       ignore_errors: True
+    - name: install git
+      apt:
+        name: gittttt
+        state: present
+      ignore_errors: True  
 
-     - name: display the output of result 
-       debug:
+    - name: installl tree 
+      apt:
+        name: tree 
+        state: present 
+    
+    - name: run the linux cmd hostname 
+      command: hostname -f 
+      register: result 
+
+    - name: display the output of result 
+      debug:
          msg: "{{result}}"
-
-     - name: install git 
-       apt: 
-         name: git 
-       when: result.stderr ==""
-
-     - name: install tree 
-       apt:
-         name: tree 
-       when: result.stderr !=""
+     
