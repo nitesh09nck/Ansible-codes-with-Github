@@ -1,0 +1,30 @@
+--- 
+- hosts: 172.31.44.121]
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: create a file
+     file:
+       path: /home/ubuntu/testfile2
+       state: touch
+
+   - name: install webserver
+     apt:
+       name: apache2
+       state: present 
+
+   - name: start web service 
+     service:
+       name: apache2 
+       state: started
+
+   - name: copy my index file into web file location
+     template:
+       src: index.j2
+       dest: /var/www/html/index.html
+
+   - name: download file from web(internet)
+     get_url:
+          url: https://get.jenkins.io/war-stable/2.332.2/jenkins.war
+          dest: /home/ubuntu/jenkins.war
+          force_basic_auth: yes
