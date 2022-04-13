@@ -6,6 +6,12 @@
     - name: run a cmd 
       command: date 
       register: display
+      tags: name1
+
+    - name: run a cmd-2 
+      command: date 
+      register: display
+      tags: name2
 
     - name: display result 
       debug:
