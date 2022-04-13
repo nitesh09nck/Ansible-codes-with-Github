@@ -9,7 +9,7 @@
       tags: name1
 
     - name: run a cmd-2 
-      command: date 
+      commanddddd: date 
       register: display
       tags: name2
 
