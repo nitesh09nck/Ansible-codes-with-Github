@@ -2,5 +2,7 @@
 - hosts: 172.31.44.121
   become: yes
   gather_facts: yes
-  include_tasks:
-    file: tasks.yml
+  tasks:
+    - name: include tasks from other file
+      include_tasks:
+          file: tasks.yml
