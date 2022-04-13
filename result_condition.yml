@@ -1,0 +1,12 @@
+--- 
+- hosts: ubuntuserver
+  become: yes
+  gather_facts: yes
+  tasks: 
+     - name: run the linux cmd hostname 
+       command: hostname -f 
+       resister: result 
+
+     - name: display the output of result 
+       debug:
+         msg: "{{result}}"
