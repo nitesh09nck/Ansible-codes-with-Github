@@ -11,6 +11,7 @@
     - name: run a cmd-2 
       command: dateee 
       register: display
+      tags: name2
 
       ignore_errors: True
 
