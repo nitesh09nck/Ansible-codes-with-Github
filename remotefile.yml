@@ -1,0 +1,9 @@
+--- 
+- hosts: 172.31.44.121
+  become: yes
+  tasks: 
+     - name: download file from web(internet)
+       get_url:
+          url: https://get.jenkins.io/war-stable/2.332.2/jenkins.war
+          dest: /home/ubuntu/jenkins.war
+          force_basic_auth: yes
