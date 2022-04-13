@@ -3,6 +3,4 @@
   become: yes
   gather_facts: yes
   tasks:
-    - name: include tasks from other file
-      include_tasks:
-          file: tasks.yml
+      - include_tasks: tasks.yml
