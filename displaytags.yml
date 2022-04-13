@@ -9,9 +9,9 @@
       tags: name1
 
     - name: run a cmd-2 
-      commanddddd: date 
+      command: dateee 
       register: display
-      tags: name2
+
       ignore_errors: True
 
     - name: display result 
