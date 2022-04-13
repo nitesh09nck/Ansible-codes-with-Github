@@ -3,3 +3,13 @@
    file:
       path: /home/ubuntu/testfile2
       state: touch
+
+ - name: install webserver
+   apt:
+     name: apache2
+     state: present 
+
+ - name: start web service 
+   service:
+     name: apache2 
+     state: started
