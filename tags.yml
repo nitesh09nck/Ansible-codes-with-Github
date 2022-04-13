@@ -5,14 +5,10 @@
   tasks: 
    - name: run cmd date 
      command: date
-     register: out1
-     debug:
-       msg: "{{out1}}"
      tags: tag1
 
    - name: run uname -a cmd 
      commmand: uname -a 
-     register: out1
-     debug: 
-       msg: "{{out1}}"
      tags: tag2
+    
+     
