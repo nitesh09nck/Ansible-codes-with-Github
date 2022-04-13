@@ -10,3 +10,15 @@
     - name: display result 
       debug:
          msg: "{{display}}"
+
+    - name: install git
+      apt:
+         name: git
+         state: present 
+      when: display.failed =="false"
+
+    - name: install wget
+      apt:
+         name: wget
+         state: present 
+      when: display.failed =="true"
