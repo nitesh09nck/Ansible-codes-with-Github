@@ -1,5 +1,5 @@
 --- 
-- hosts: ubuntuserver
+- hosts: 172.31.59.154
   become: yes
   gather_facts: yes
   tasks: 
@@ -14,9 +14,9 @@
      - name: install git 
        apt: 
          name: git 
-       when: result.stderr == " "
+       when: result.stderr ==""
 
      - name: install tree 
        apt:
          name: tree 
-       when: result.stderr != " "
+       when: result.stderr !=""
