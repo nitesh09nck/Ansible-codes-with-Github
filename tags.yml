@@ -9,8 +9,10 @@
         state: present
       tags: tag1
 
-    - name: run uname -a cmd 
-      commmand: uname -a 
+    - name: installl tree 
+      apt:
+        name: tree 
+        state: present 
       tags: tag2
     
      
