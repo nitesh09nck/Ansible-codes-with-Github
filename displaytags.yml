@@ -12,7 +12,7 @@
       commanddddd: date 
       register: display
       tags: name2
-      ignore_errors: yes
+      ignore_errors: True
 
     - name: display result 
       debug:
