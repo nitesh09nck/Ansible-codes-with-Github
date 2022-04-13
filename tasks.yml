@@ -1,0 +1,5 @@
+tasks: 
+    - name: create a file
+      file:
+         path: /home/ubuntu/testfile2
+         state: touch

@@ -2,8 +2,4 @@
 - hosts: 172.31.44.121
   become: yes
   gather_facts: yes
-  tasks: 
-    - name: create a file
-      file:
-         path: /home/ubuntu/testfile
-         state: touch
+  include_tasks: tasks.yml
