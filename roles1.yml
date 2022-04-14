@@ -1,0 +1,6 @@
+--- 
+- hosts: webserbers
+  become: yes
+  gather_facts: yes
+  roles:
+     - { role: webrole, when: ansible_os_family == "Debian" }
