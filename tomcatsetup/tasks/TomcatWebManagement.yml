@@ -1,7 +1,7 @@
 ---
 - name:  editing the tomcat-users.xml file
   template:
-      src: template/tomcatuser.j2
+      src: template/tomcatuser01.j2
       dest: /opt/tomcat/conf/tomcat-users.xml
 
 - name: For the Manager app
@@ -11,5 +11,5 @@
 
 - name: For the Host Manager app
   template:
-     src: template/hostcontext.j2
+     src: template/hostcontext01.j2
      dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
