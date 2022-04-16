@@ -1,6 +1,6 @@
 --- 
 
-- hosts: 172.31.54.10
+- hosts: ubuntuserver
   become: yes
   gather_facts: yes
   roles:
